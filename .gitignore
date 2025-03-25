@@ -25,10 +25,10 @@ desktop.ini
 *.log
 
 # Data
-# data/raw/
+data/raw/
 data/interim/
 data/external/
-#data/processed/
+data/processed/
 
 # Models
 models/

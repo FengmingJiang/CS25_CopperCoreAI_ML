@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Data
+data/raw/
+data/interim/
+data/external/
+data/processed/
+
+# Models
+models/
+
+# Secret files
+.env
+*.key
+*.pem
+
+# Jupyter runtime
+*.nbconvert.ipynb
+
+# Large file links (if using Git LFS or external storage)
+*.zip
+*.tar.gz
+

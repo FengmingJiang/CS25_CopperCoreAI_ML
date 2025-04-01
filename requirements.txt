@@ -4,4 +4,6 @@ scikit-learn
 matplotlib
 seaborn
 jupyter
-
+geopandas
+contextily
+shapely.geometry

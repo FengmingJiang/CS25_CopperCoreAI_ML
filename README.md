@@ -19,39 +19,41 @@ You can find detailed data descriptions in `data/metadata/`.
 
 ```
 .
-├── backend/                 # Backend service directory
-├── model_dev/              # Model development directory
-│   ├── 0_data_understanding/    # Initial data analysis and understanding
-│   ├── 1_sample_construction/   # Sample dataset construction
-│   ├── 2_feature_extraction/    # Feature engineering and extraction
-│   ├── 3_data_exploration/      # Data exploration and visualization
-│   ├── 4_model_training/        # Model training and evaluation
-│   └── 5_prediction/           # Prediction pipeline
-├── data/                   # Data storage directory
-├── models/                 # Trained models storage
-├── scripts/               # Utility scripts
-├── geoenv/                # Python virtual environment
-├── .dist/                 # Distribution files
-├── requirements.txt       # Python dependencies
-└── LICENSE.txt           # Project license
+├── backend/                           # Backend service directory
+├── model_development/                # ML model development pipeline
+│   ├── 00_sample_construction/       # Sample generation: positive, other, blank
+│   ├── 01_data_diagnostics/          # Raw GeoTIFF data inspection (quality, coverage)
+│   ├── 02_geospatial_feature_extraction/  # Extract geophysical and geochemical features from raster
+│   ├── 03_training_data_exploration_and_preprocessing/         # EDA on the training dataset and preorocessing based on EDA results
+│   ├── 04_model_driven_feature_selection/         # Feature Engineer: Feature importance, correlation, redundancy removal
+│   ├── 05_model_training/            # ML model training and validation
+│   ├── 06_prediction_and_visualisation/         # Prediction generation and export
+├── data/                             # Raw and processed dataset storage
+├── models/                           # Trained model artifacts
+├── scripts/                          # Utility and backend-facing scripts
+├── geoenv/                           # Python virtual environment (excluded from Git)
+├── .dist/                            # Temporary distribution outputs
+├── requirements.txt                  # Python dependency list
+└── LICENSE.txt                       # Project license
 ```
 
 ## Directory Descriptions
 
-- **backend/**: Contains the backend service implementation
-- **model_dev/**: Main directory for model development, following a structured pipeline:
-  - **0_data_understanding/**: Initial data analysis and understanding
-  - **1_sample_construction/**: Sample dataset construction
-  - **2_feature_extraction/**: Feature engineering and extraction
-  - **3_data_exploration/**: Data exploration and visualization
-  - **4_model_training/**: Model training and evaluation
-  - **5_prediction/**: Prediction pipeline implementation
-- **data/**: Storage for datasets and processed data
-- **models/**: Storage for trained model artifacts
-- **scripts/**: Utility scripts for various tasks
-- **geoenv/**: Python virtual environment
-- **.dist/**: Distribution files
-- **requirements.txt**: List of Python package dependencies
-- **LICENSE.txt**: Project license information
+- **`backend/`**: Django + PostGIS backend implementation with API integration.
+- **`model_development/`**: Primary directory for machine learning pipeline, organized into modular stages:
+  - **`00_sample_construction/`**: Builds labeled sample points using positive (porphyry), other deposit, and blank regions.
+  - **`01_data_diagnostics/`**: Inspects raw GeoTIFF layers (gravity, magnetics, AEM, radiometrics, geochem) to assess usability for modeling.
+  - **`02_geospatial_feature_extraction/`**: Extracts numerical features from raster data based on sample coordinates.
+  - **`03_training_data_exploration_and_preprocessing/`**: Explores the labeled training data via statistical summaries, correlation matrices, and feature distributions.
+  - **`04_model_driven_feature_selection/`**: Conducts variance filtering, correlation removal, and model-based feature ranking.
+  - **`05_model_training/`**: Builds and validates machine learning models (Random Forest, XGBoost, etc.).
+  - **`06_prediction_and_visualisation/`**: Generates prediction probabilities and exports model results for integration.
+- **`data/`**: Contains source GeoTIFFs, CSV samples, and intermediate data outputs.
+- **`models/`**: Saves serialized model objects (e.g., `.pkl`, `.joblib`) and checkpoints.
+- **`scripts/`**: Contains reusable preprocessing, model loading, and prediction scripts for backend use.
+- **`geoenv/`**: Local Python virtual environment (excluded via `.gitignore`).
+- **`.dist/`**: Output distribution files for packaging or sharing.
+- **`requirements.txt`**: Lists all Python dependencies required for this project.
+- **`LICENSE.txt`**: Project license and usage permissions.
 
 

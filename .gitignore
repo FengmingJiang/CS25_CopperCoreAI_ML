@@ -32,7 +32,7 @@ data/external/
 #data/processed/
 
 # Models
-models/
+# models/
 
 # Secret files
 .env

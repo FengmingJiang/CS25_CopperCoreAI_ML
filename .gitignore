@@ -29,7 +29,7 @@ desktop.ini
 data/raw/
 data/interim/
 data/external/
-#data/processed/
+data/test/
 
 # Models
 # models/

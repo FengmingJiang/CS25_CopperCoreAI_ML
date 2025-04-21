@@ -54,3 +54,4 @@ tests/data/system/
 *.zip
 *.tar.gz
 
+tests/data/user/gravity_cscba_1vd.tif

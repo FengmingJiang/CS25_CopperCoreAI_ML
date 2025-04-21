@@ -29,6 +29,8 @@ desktop.ini
 data/raw/
 data/interim/
 data/external/
+data/aligned/
+data/derived/
 data/test/
 
 # Models
@@ -39,6 +41,12 @@ data/test/
 *.key
 *.pem
 
+#Scripts
+scripts/test/
+
+#tests
+tests/data/system/
+
 # Jupyter runtime
 *.nbconvert.ipynb
 
@@ -46,3 +54,4 @@ data/test/
 *.zip
 *.tar.gz
 
+tests/data/user/gravity_cscba_1vd.tif

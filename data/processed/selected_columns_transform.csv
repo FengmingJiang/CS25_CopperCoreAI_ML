@@ -1,0 +1,11 @@
+0
+gravity_iso_residual
+gravity_cscba
+gravity_cscba_1vd
+mag_uc_4_8km
+radio_k_pct
+radio_u_ppm
+gravity_cscba_stddev3x3_log1p
+mag_uc_2_4km_thd_log1p
+mag_uc_2_4km_stddev3x3_log1p
+radio_th_k_ratio_log1p

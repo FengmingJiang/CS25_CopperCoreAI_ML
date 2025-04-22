@@ -24,10 +24,9 @@ You can find detailed data descriptions in `data/metadata/`.
 │   ├── 00_sample_construction/       # Sample generation: positive, other, blank
 │   ├── 01_data_diagnostics/          # Raw GeoTIFF data inspection (quality, coverage)
 │   ├── 02_geospatial_feature_extraction/  # Extract geophysical and geochemical features from raster
-│   ├── 03_training_data_exploration_and_preprocessing/         # EDA on the training dataset and preorocessing based on EDA results
-│   ├── 04_model_driven_feature_selection/         # Feature Engineer: Feature importance, correlation, redundancy removal
-│   ├── 05_model_training/            # ML model training and validation
-│   ├── 06_prediction_and_visualisation/         # Prediction generation and export
+│   ├── 03_EDA_and_preprocessing/         # EDA on the training dataset and preorocessing based on EDA results
+│   ├── 04_model_training_and_hypertuning/    # ML model training and validation           
+│   ├── 05_prediction_and_visualisation/         # Prediction generation and export
 ├── data/                             # Raw and processed dataset storage
 ├── models/                           # Trained model artifacts
 ├── scripts/                          # Utility and backend-facing scripts

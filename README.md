@@ -43,10 +43,9 @@ You can find detailed data descriptions in `data/metadata/`.
   - **`00_sample_construction/`**: Builds labeled sample points using positive (porphyry), other deposit, and blank regions.
   - **`01_data_diagnostics/`**: Inspects raw GeoTIFF layers (gravity, magnetics, AEM, radiometrics, geochem) to assess usability for modeling.
   - **`02_geospatial_feature_extraction/`**: Extracts numerical features from raster data based on sample coordinates.
-  - **`03_training_data_exploration_and_preprocessing/`**: Explores the labeled training data via statistical summaries, correlation matrices, and feature distributions.
-  - **`04_model_driven_feature_selection/`**: Conducts variance filtering, correlation removal, and model-based feature ranking.
-  - **`05_model_training/`**: Builds and validates machine learning models (Random Forest, XGBoost, etc.).
-  - **`06_prediction_and_visualisation/`**: Generates prediction probabilities and exports model results for integration.
+  - **`03_EDA_and_preprocessing/`**: Explores the labeled training data via statistical summaries, correlation matrices, and feature distributions.
+  - **`04_model_training_and_hypertuning`**: Builds and validates machine learning models (Random Forest, XGBoost, etc.).
+  - **`05_prediction_and_visualisation/`**: Generates prediction probabilities and exports model results for integration.
 - **`data/`**: Contains source GeoTIFFs, CSV samples, and intermediate data outputs.
 - **`models/`**: Saves serialized model objects (e.g., `.pkl`, `.joblib`) and checkpoints.
 - **`scripts/`**: Contains reusable preprocessing, model loading, and prediction scripts for backend use.

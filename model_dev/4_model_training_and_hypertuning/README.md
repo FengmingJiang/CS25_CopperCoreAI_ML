@@ -21,7 +21,7 @@ This document summarizes the performance evaluation and final selection of model
 
 ## Final Model Selection
 
-**Selected Model**: `41a_model_training_gb_with_all_features_transformed`
+**Selected Model**: `40c_model_training_rf_with_all_features_not_transformed`
 
 - **Algorithm**: Random Forest Classifier
 - **Input**: All features with no transformation

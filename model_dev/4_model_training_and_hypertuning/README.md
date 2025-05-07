@@ -23,8 +23,8 @@ This document summarizes the performance evaluation and final selection of model
 
 **Selected Model**: `41a_model_training_gb_with_all_features_transformed`
 
-- **Algorithm**: Gradient Boosting Classifier
-- **Input**: All features with transformation
+- **Algorithm**: Random Forest Classifier
+- **Input**: All features with no transformation
 - **Why selected**:
   - Highest ROC AUC (**0.9875**)
   - Best PR AUC (**0.9494**)
